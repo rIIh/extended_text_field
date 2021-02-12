@@ -2691,7 +2691,7 @@ class _Editable extends MultiChildRenderObjectWidget {
       textScaleFactor: textScaleFactor,
       textAlign: textAlign,
       textDirection: textDirection,
-      locale: locale ?? Localizations.localeOf(context, nullOk: true),
+      locale: locale ?? Localizations.maybeLocaleOf(context),
       selection: value.selection,
       offset: offset,
       onSelectionChanged: onSelectionChanged,
@@ -2738,7 +2738,7 @@ class _Editable extends MultiChildRenderObjectWidget {
       ..textScaleFactor = textScaleFactor
       ..textAlign = textAlign
       ..textDirection = textDirection
-      ..locale = locale ?? Localizations.localeOf(context, nullOk: true)
+      ..locale = locale ?? Localizations.maybeLocaleOf(context)
       ..selection = value.selection
       ..offset = offset
       ..onSelectionChanged = onSelectionChanged

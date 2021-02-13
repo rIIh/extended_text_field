@@ -2399,8 +2399,7 @@ class ExtendedEditableTextState extends State<ExtendedEditableText>
         restorationId: widget.restorationId,
         viewportBuilder: (BuildContext context, ViewportOffset offset) {
           if (offset != null && offset is ScrollPosition) {
-            if (offset.minScrollExtent != null &&
-                offset.maxScrollExtent != null) {
+            if (offset.hasContentDimensions) {
               // pixels should >= minScrollExtent
               // pixels should <= maxScrollExtent
               offset.correctPixels(offset.pixels.clamp(
